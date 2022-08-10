@@ -1,0 +1,23 @@
+
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "11.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.base', 'javafx.swing', 'javafx.media', 'javafx.web', 'javafx.graphics' ]
+}
+mainClassName = 'Main.InventoryApp'
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'Main.InventoryApp'
+        )
+    }
+}
